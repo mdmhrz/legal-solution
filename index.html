@@ -9,12 +9,33 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-        @theme {
-          --color-clifford: #da373d;
-          --font-primary: space grotesk;
+    <!-- <style type="text/tailwindcss">
+        /* @theme {
+          /* --color-primary: #B68C5A; */
+          --font-grotesk: space grotesk;
+          --font-secondary: poppins;
+          /* --bg-primary: #B68C5A; */
+        } */
+    </style> -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#B68C5A',
+                        dark1: '#111111',
+                        dark2: '#414040',
+                        dark3: '#707070'
+                    },
+                    fontFamily: {
+                        primary: ["Space Grotesk", "sans-serif"],
+                        secondary: ["Poppins", "sans-serif"],
+                    }
+                }
+            }
         }
-    </style>
+    </script>
+
     <!-- Google Poppins Font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,21 +46,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-
-
-
 </head>
-
 
 <body class="font-primary">
     <header class="">
         <nav class="container mx-auto">
             <div class="navbar md:w-11/12 w-[98%] mx-auto">
                 <div class="navbar-start">
-                    <a class="flex items-center justify-start gap-x-1">
-                        <img src="./images/logo.png" alt="">
-                        <h1>Justice</h1>
-                    </a>
+                    <div class="flex items-center gap-4">
+                        <img src="./images/logo.svg" alt="Company Logo">
+                        <h1 class="text-3xl font-bold text-dark2">Justice</h1>
+                    </div>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
@@ -51,7 +68,7 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn hidden md:flex">Contact</a>
+                    <a class="btn hidden md:flex bg-primary">Contact</a>
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
