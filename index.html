@@ -9,23 +9,40 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <style type="text/tailwindcss">
-        /* @theme {
-          /* --color-primary: #B68C5A; */
-          --font-grotesk: space grotesk;
-          --font-secondary: poppins;
-          /* --bg-primary: #B68C5A; */
-        } */
-    </style> -->
+
+    <!-- Google Poppins Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Space Grotesk Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Custom CSS -->
+    <style type="text/tailwindcss">
+        .btn-accent {
+            @apply bg-accent text-white border-none
+        }
+        .banner {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.877), rgba(255, 255, 255, 0)), url('./images/banner.png');
+        }
+    
+    </style>
+
+    <!-- Tailwind Inline Script -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         accent: '#B68C5A',
-                        dark1: '#111111',
-                        dark2: '#414040',
-                        dark3: '#707070'
+                        primary: '#111111',
+                        secondary: '#414040',
+                        tertiary: '#707070',
                     },
                     fontFamily: {
                         primary: ["Space Grotesk", "sans-serif"],
@@ -35,40 +52,29 @@
             }
         }
     </script>
-
-    <!-- Google Poppins Font CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <!-- Google Space Grotesk Font CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body class="font-primary">
-    <header class="">
-        <nav class="container mx-auto">
-            <div class="navbar md:w-11/12 w-[98%] mx-auto">
+    <header class="px-5 sm:px-8 md:px-10 lg:px-16">
+        <nav class="">
+            <div class="navbar">
                 <div class="navbar-start">
                     <div class="flex items-center gap-4">
                         <img src="./images/logo.svg" alt="Company Logo">
-                        <h1 class="text-3xl font-bold text-dark2">Justice</h1>
+                        <h1 class="text-3xl font-bold text-secondary">Justice</h1>
                     </div>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        <li><a>Service</a></li>
-                        <li><a>Cases</a></li>
-                        <li><a>Blog</a></li>
-                        <li><a>Contact Us</a></li>
+                        <li><a class="text-[1rem] text-tertiary">Home</a></li>
+                        <li><a class="text-[1rem] text-tertiary">Service</a></li>
+                        <li><a class="text-[1rem] text-tertiary">Cases</a></li>
+                        <li><a class="text-[1rem] text-tertiary">Blog</a></li>
+                        <li><a class="text-[1rem] text-tertiary">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn hidden md:flex bg-primary">Contact</a>
+                    <a class="btn hidden md:flex bg-accent text-white text-[1.15rem]">Free Consultation</a>
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -93,6 +99,22 @@
                 </div>
             </div>
         </nav>
+        <!-- Banner Section -->
+        <section
+            class="mt-[50px] banner flex items-center justify-center  bg-cover bg-no-repeat bg-center px-8 py-10 sm:px-12 sm:py-16 lg:px-[240px] lg:py-[140px] text-white">
+            <div class="space-y-5 text-center">
+                <h1 class="text-6xl md:text-7xl font-bold">We Provide Effective Legal Solutions</h1>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration
+                    in some form, by injected humour.</p>
+                <div class="flex items-centerr gap-4">
+                    <input class="shadow-xl flex-1 p-3 rounded-xl bg-white" type="text"
+                        placeholder="Search your services">
+                    <button class="btn btn-accent px-10 text-[1.25rem] font-semibold">Search</button>
+                </div>
+            </div>
+
+        </section>
     </header>
     <main>
 
