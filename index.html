@@ -100,7 +100,7 @@
                 <div class="navbar-end">
                     <a class="btn hidden md:flex bg-accent text-white text-[1.15rem]">Free Consultation</a>
                     <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <div tabindex="0" role="button" class="btn btn-ghost rotate-180 lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -109,15 +109,11 @@
                         </div>
                         <ul tabindex="0"
                             class="menu items-end right-0 menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul class="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Item 3</a></li>
+                            <li><a class="text-[1rem] text-tertiary">Home</a></li>
+                            <li><a class="text-[1rem] text-tertiary">Service</a></li>
+                            <li><a class="text-[1rem] text-tertiary">Cases</a></li>
+                            <li><a class="text-[1rem] text-tertiary">Blog</a></li>
+                            <li><a class="text-[1rem] text-tertiary">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -327,14 +323,87 @@
                 </div>
             </div>
         </section>
+        <!-- Contact With Us Section -->
+        <section class="px-5 sm:px-8 md:px-10 lg:px-16 md:mb-[120px] mb-[80px]">
+            <div class="text-center max-w-[700px] mx-auto">
+                <h1 class="text-secondary font-bold text-[40px] mb-5">Contact With Us</h1>
+                <p class="text-tertiary mb-8">There are many variations of passages of Lorem Ipsum available, but the
+                    majority have suffered
+                    alteration in some form, by injected humour.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Contacts Grid -->
+                <div class="grid grid-cols-2">
+                    <div class="p-5 text-center border">
+                        <img class="mx-auto mb-3" src="./images/location.png" alt="">
+                        <h1 class="text-secondary font-bold mb-4 text-[24px]">Address</h1>
+                        <p class="text-tertiary text-[.9rem]">Mirpur DOHS, Mirpur, Dhaka, Bangladesh</p>
+                    </div>
+                    <div class="p-5 text-center border">
+                        <img class="mx-auto mb-3" src="./images/call.png" alt="">
+                        <h1 class="text-secondary font-bold mb-4 text-[24px]">Call Us</h1>
+                        <p class="text-tertiary text-[.9rem]">+880 1821 224582 <br> +880 1566 049616</p>
+                    </div>
+                    <div class="p-5 text-center border">
+                        <img class="mx-auto mb-3" src="./images/email.png" alt="">
+                        <h1 class="text-secondary font-bold mb-4 text-[24px]">Email Us</h1>
+                        <p class="text-tertiary text-[.9rem]">info@gmail.com <br> info@ymail.com</p>
+                    </div>
+                    <div class="p-5 text-center border">
+                        <img class="mx-auto mb-3" src="./images/time.png" alt="">
+                        <h1 class="text-secondary font-bold mb-4 text-[24px]">Working Hours</h1>
+                        <p class="text-tertiary text-[.9rem]">Mon-Fri: 9AM to 5PM <br>Sunday: 9AM to 1 PM</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <input class="p-4 border rounded-lg bg-gray-100" type="text" name="" id="" placeholder="Your Name">
+                    <input class="p-4 border rounded-lg bg-gray-100" type="email" name="" id=""
+                        placeholder="Your Email">
+                    <input class="p-4 border rounded-lg bg-gray-100" type="text" name="" id="" placeholder="Subject">
+                    <textarea class="p-4 border rounded-lg" name="" id="" placeholder="Your Message"></textarea>
+                    <button class="btn btn-accent">Send Message</button>
 
-
-
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-
+    <footer class="footer bg-primary text-white text-base-content p-10">
+        <nav>
+            <div class="">
+                <div class="flex items-center gap-4 mb-5">
+                    <img src="./images/logo.svg" alt="Company Logo">
+                    <h1 class="text-3xl font-bold text-white">Justice</h1>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui odit esse aspernatur harum? Fuga
+                    aspernatur cumque dolorum qui doloribus consequatur?</p>
+            </div>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <form>
+            <h6 class="footer-title">Newsletter</h6>
+            <fieldset class="form-control w-80">
+                <label class="label">
+                    <span class="label-text text-white">Enter your email address</span>
+                </label>
+                <div class="join">
+                    <input type="text" placeholder="username@site.com" class="input input-bordered join-item" />
+                    <button class="btn btn-accent join-item">Subscribe</button>
+                </div>
+            </fieldset>
+        </form>
     </footer>
-
 </body>
 
 </html>
